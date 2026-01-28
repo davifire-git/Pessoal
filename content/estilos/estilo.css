@@ -21,41 +21,53 @@
         font-family: Arial, sans-serif;
         color: #222;
     }
+    /*Menu*/
 
-    header h1{
-        font-family: var(--fonte-destaque);
-        font-size: 10vh;
-        margin-top: 50px;
-        margin-left: 290px;
+    header h1 {
+    font-family: var(--fonte-destaque);
+    font-size: clamp(3rem, 6vw, 5rem);
     }
+
 
     header h2 {
-        font-family: var(--fonte-destaque);
-        margin-top: 0px;
-        margin-left: 290px;
+    font-family: var(--fonte-destaque);
     }
 
-    header nav{
-        height: 35px;
-        width: 1000px;
-        margin-top: 13px;
-        margin-left: 240px;
-        background-color:#224e53;
+    header nav {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+    background-color: #224e53;
+    padding: 10px 0;
+    margin-top: 20px;
     }
 
-    header a {
-        font-family: Arial, Helvetica, sans-serif;
-        text-decoration: none;
-        font-size: 25px;
-        color:rgb(246, 244, 241);
-        padding-top: 0px;
-        padding-left: 135px;
-        transition-duration: 0.4s;
+    header nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(246, 244, 241);
+    transition: 0.3s;
     }
 
-    header a:hover {
-        color: rgb(185, 185, 185);
-        text-decoration: underline;
+
+    header nav a:hover {
+    color: rgb(185, 185, 185);
+    text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+    header nav {
+    flex-direction: column;
+    gap: 15px;
+
+    }
+    }
+
+    .header-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 0;
     }
 
     /* Empurra conteúdo por causa do menu fixo  */
@@ -63,44 +75,49 @@
         height: 70px;
     }
     /* Seções */
-    section {
-        padding: 50px 20px;
-        max-width: 900px;
-        
-    }
-    section h2 {
-        margin-bottom: 15px;
-        font-size: 1.8rem;
-        color: #333;
-    }
-    section p {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: #444;
-    }
+    /* INÍCIO */
+#inicio {
+  padding: 60px 20px;
+}
 
-    section#inicio h1 {
-        font-size: 50px;
-        padding-bottom: 40px;
-    }
+.inicio-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
 
-    section#inicio {
-        text-indent: 10px;
-        width: 415px;
-        height: 230px;
-        margin-top: 0px;
-        margin-left: 635px
-    }
+.inicio-img {
+  background-image: url('../imagens/livro.png');
+  background-size: cover;
+  background-position: center;
+  width: 300px;
+  height: 370px;
+}
 
-    section #imginicio {
-        position: absolute;
-        top: 305px;
-        left: 165px;
-        background-image: url('../imagens/livro.png');
-        background-size: cover;
-        height: 370px;
-        width: 300px;
-    }
+.inicio-texto {
+  max-width: 450px;
+}
+
+.inicio-texto h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .inicio-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .inicio-img {
+    width: 220px;
+    height: 270px;
+  }
+}
 
     .space{
         height: 70px;
