@@ -76,14 +76,11 @@
     .inicio-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* empurra img pra esquerda e texto pra direita */
+    justify-content: center; /* empurra img pra esquerda e texto pra direita */
     gap: 40px;
     max-width: 1100px;
     margin: auto;
 }
-    .inicio-titulo {
-        display: flex;
-    }
 
     .inicio-texto {
     max-width: 450px;
@@ -123,7 +120,7 @@
     text-align: center;
   }
 
-  .inicio-texto h1 {
+  .inicio-titulo {
     order: 1;
   }
 
@@ -132,7 +129,7 @@
     max-width: 250px;
   }
 
-  .inicio-texto {
+    .inicio-texto {
     order: 3;
   }
 }
