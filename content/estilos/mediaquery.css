@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+@media (max-width: 600px) {
+    header nav {
+    flex-direction: column;
+    gap: 15px;
+
+    }
+}    
+
+@media (max-width: 768px) {
+  .inicio-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+.inicio-titulo {
+    order: 1;
+  }
+
+#img-livro {
+    order: 3;
+    max-width: 250px;
+  }
+
+.inicio-texto {
+    order: 2;
+  }
+
+  #burguer {
+    background-color: rgba(29, 29, 29, 0.893);
+    color: white;
+    text-align: center;
+    width: 100vw;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+}
+#burguer:hover {
+    color: black;
+    background-color: white;
+}
+}
