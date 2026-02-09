@@ -1,61 +1,20 @@
- @charset "UTF-8";
-
- @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
+@charset "UTF-8";
 
 @import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
 
-
 * {
-        margin: 0px;
-        padding: 0px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-:root {
-        --fonte-escrita:'Great Vibes';
-        --fonte-destaque:'Darker Grotesque';
-    }
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-        font-family: Arial, sans-serif;
-        background-color: rgb(243, 239, 239);
-        color: #222;
-}
-    /*Menu*/
-
-header h1 {
-    font-family: var(--fonte-destaque);
-    font-size: clamp(3rem, 6vw, 5rem);
+    font-family: Arial, sans-serif;
+    background-color: rgb(243, 239, 239);
+    color: #222;
 }
 
-
-header h2 {
-    font-family: var(--fonte-destaque);
-}
-
-header nav {
-    display: flex;
-    justify-content: center;
-    gap: 100px;
-
-    background-color: #224e53;
-    padding: 10px 0;
-    margin-top: 20px;
-}
-
-header nav a {
-    text-decoration: none;
-    font-size: 1.2rem;
-    color: rgb(246, 244, 241);
-    transition: 0.3s;
-}
-
-
-header nav a:hover {
-    color: rgb(185, 185, 185);
-    text-decoration: underline;
-}
+/* HEADER */
 
 .header-container {
     max-width: 1100px;
@@ -63,57 +22,71 @@ header nav a:hover {
     padding: 30px 20px 0;
 }
 
-    /* Empurra conteúdo por causa do menu fixo  */
+header h1 {
+    font-family: 'Darker Grotesque';
+    font-size: clamp(3rem, 6vw, 5rem);
+}
+
+header h2 {
+    font-family: 'Darker Grotesque';
+}
+
+/* MENU DESKTOP (estado padrão) */
+
+#burguer {
+    display: none;
+}
+
+nav#itens {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    background-color: #224e53;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+nav#itens a {
+    text-decoration: none;
+    color: #f6f4f1;
+    font-size: 1.2rem;
+}
+
+/* ESPAÇAMENTOS */
+
 .top-space {
-        height: 70px;
+    height: 70px;
 }
-    /* Seções */
-    /* INÍCIO */
-    #inicio {
-    padding: 60px 20px;
+
+.space {
+    height: 70px;
 }
+
+/* INÍCIO */
 
 .inicio-container {
     display: flex;
     align-items: center;
-    justify-content: center; /* empurra img pra esquerda e texto pra direita */
+    justify-content: center;
     gap: 40px;
     max-width: 1100px;
     margin: auto;
+    padding: 40px 20px;
 }
-
-.inicio-texto {
-    max-width: 450px;
-    }
-
-.inicio-texto h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    }
 
 #img-livro {
     max-width: 400px;
     width: 100%;
-    height: auto;
-    }
-
-span#burguer {
-    display: none;
 }
 
-#img-whatsapp {
-    border-radius: 25px;
-    }
+.inicio-texto {
+    max-width: 450px;
+}
 
-.space{
-    height: 70px;
-        }
-
-        /* Rodapé */
 footer {
     text-align: center;
     padding: 25px;
     background: #222;
     color: #fff;
-    font-size: 0.9rem;
 }
+    

@@ -1,88 +1,289 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./estilos/style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./estilos/estilo.css">
+    <link rel="stylesheet" href="./estilos/mediaquery.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+    <title>Psicóloga | Ilkare</title>
+
 </head>
-<body>
+<body onresize="mudouTamanho()">
     <header>
-        <div id="hfoto"></div>
-        <h1>Ilkare</h1>
-        <nav>
-            <a href="">Início</a>
-            <a href="">Psicoterapia Online</a>
-            <a href="">Sobre mim</a>
-            <a href="">Blog</a>
-        </nav>
+        <div class="header-container">
+            <h1>Ilkare</h1>
+            <h2>Psicologia clínica</h2>
+            <span class="material-symbols-outlined" id="burguer" onclick="clickMenu()">menu</span>
+            <nav id="itens">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#contato">Contato</a>
+            </nav>
+        </div>
     </header>
 
-    <!--    section {
-        padding: 50px 20px;
-        max-width: 900px;
-        
-    }
-    section h2 {
-        margin-bottom: 15px;
-        font-size: 1.8rem;
-        color: #333;
-    }
-    section p {
-        font-size: 1rem;
-        line-height: 1.6;
-        color: #444;
-    }
+    <div class="top-space"></div>
 
-    section#inicio h1 {
-        font-size: 50px;
-        padding-bottom: 40px;
-    }
-
-    section#inicio {
-        text-indent: 10px;
-        width: 415px;
-        height: 230px;
-        margin-top: 0px;
-        margin-left: 635px
-    }
-
-    section #imginicio {
-        position: absolute;
-        top: 305px;
-        left: 165px;
-        background-image: url('../imagens/livro.png');
-        background-size: cover;
-        height: 370px;
-        width: 300px;
-
-            header h1{
-        font-family: var(--fonte-destaque);
-        font-size: 10vh;
-        margin-top: 50px;
-        margin-left: 290px;
-    }
-
-    header h2 {
-        font-family: var(--fonte-destaque);
-        margin-top: 0px;
-        margin-left: 290px;
-    }
-    }
-    
     <div class="inicio-container">
-    <img src="imagens/livro.png" alt="img-livro" id="img-livro">
 
-    <div class="inicio-texto">
-      <h1 class="inicio-titulo">Seja Bem Vindo!</h1>
-      <h2>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consectetur illo voluptas totam, nihil tempora quos dolor exercitationem similique aperiam optio amet ipsam, iste facere id aut nisi quaerat qui sint!</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis reprehenderit, molestias, dicta laudantium dignissimos itaque quisquam magni harum debitis iste aliquid nostrum aperiam nemo ipsa ut recusandae cum, odio tempora?</p>
-      <a href="https://api.whatsapp.com/send?phone=5514996115090" target="_blank" rel="noopener noreferrer">
-        <img src="imagens/whats.png" alt="img-whatsap" id="img-whatsapp">
-      </a>
-    </div>
+  <img src="imagens/livro.png" alt="img-livro" id="img-livro">
+
+  <div class="inicio-texto">
+    <h1 class="texto-titulo">Seja Bem Vindo!</h1>
+    <h2>...</h2>
+    <p>...</p>
   </div>
-    
-    -->
+
+</div>
+
+</section>
+
+    <div class="space"></div>
+
+    <!-- Sobre -->
+    <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <img src="imagens/sobremim.png" alt="">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, voluptatum sed eligendi ad, asperiores iusto alias ex corporis dolores quibusdam earum. Perferendis ad quia quidem animi ut facilis asperiores pariatur? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptate delectus excepturi est sint rerum consequatur sequi aspernatur eos perferendis molestias. Nihil temporibus nam perferendis, nesciunt error officiis. Doloremque, fugit saepe!</p>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos">
+    <h2>Serviços</h2>
+    <p>
+        Liste os serviços que você oferece — por exemplo:
+        <ul>
+        <li>Consulta psicológica presencial</li>
+        <li>Atendimento online via videochamada</li>
+        <li>Terapia para ansiedade, depressão, estresse</li>
+        </ul>
+    </p>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato">
+    <h2>Contato</h2>
+    <p>Email: seuemail@dominio.com</p>
+    <p>WhatsApp: (xx) xxxxx-xxxx</p>
+    <p>Endereço consultório (se houver)</p>
+    </section>
+
+    <footer>
+    © 2026 Seu Nome. Todos os direitos reservados.
+    </footer>
+
+    <script>
+        function clickMenu() {
+    itens.classList.toggle('ativo')
+    }
+
+                function clickMenu() {
+            if (itens.style.display == 'flex') {
+                itens.style.display = 'none'
+        }   else {
+            itens.style.display = 'flex'
+        }
+    }
+    </script>
 </body>
 </html>
+
+<!-- 
+ @charset "UTF-8";
+
+ @import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&display=swap');
+
+
+* {
+        margin: 0px;
+        padding: 0px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+:root {
+        --fonte-escrita:'Great Vibes';
+        --fonte-destaque:'Darker Grotesque';
+    }
+
+body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(243, 239, 239);
+        color: #222;
+}
+    /*Menu*/
+
+header h1 {
+    font-family: var(--fonte-destaque);
+    font-size: clamp(3rem, 6vw, 5rem);
+}
+
+
+header h2 {
+    font-family: var(--fonte-destaque);
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+
+    background-color: #224e53;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+header nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: rgb(246, 244, 241);
+    transition: 0.3s;
+}
+
+
+header nav a:hover {
+    color: rgb(185, 185, 185);
+    text-decoration: underline;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 30px 20px 0;
+}
+
+    /* Empurra conteúdo por causa do menu fixo  */
+.top-space {
+        height: 70px;
+}
+    /* Seções */
+    /* INÍCIO */
+    #inicio {
+    padding: 60px 20px;
+}
+
+.inicio-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* empurra img pra esquerda e texto pra direita */
+    gap: 40px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.inicio-texto {
+    max-width: 450px;
+    }
+
+.inicio-texto h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    }
+
+#img-livro {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    }
+
+#img-whatsapp {
+    border-radius: 25px;
+    }
+
+.space{
+    height: 70px;
+        }
+
+        /* Rodapé */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #222;
+    color: #fff;
+    font-size: 0.9rem;
+}
+    
+
+
+
+
+
+
+
+
+@charset "UTF-8";
+
+@media (max-width: 600px) {
+    header nav {
+    flex-direction: column;
+    gap: 15px;
+
+    }
+}  
+
+
+@media (max-width: 768px) {
+header nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 0;
+        display: none;
+    }
+
+    header nav.ativo {
+        display: flex;
+    }
+
+
+  .inicio-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+.inicio-titulo {
+    order: 1;
+  }
+
+#img-livro {
+    order: 3;
+    max-width: 250px;
+  }
+
+.inicio-texto {
+    order: 2;
+  }
+
+  #burguer {
+    background-color: rgba(29, 29, 29, 0.893);
+    color: white;
+    text-align: center;
+    width: 100vw;
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+}
+#burguer:hover {
+    color: black;
+    background-color: white;
+}
+nav#itens {
+    display: none;
+}
+}
+
+
+
+
+@media screen and (min-width: 992px){
+    #burguer {
+        display: none;
+    }
+
+    header nav {
+        display: flex !important;
+    }
+}
