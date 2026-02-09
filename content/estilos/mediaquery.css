@@ -1,15 +1,14 @@
 @charset "UTF-8";
 
-/* MOBILE */
 @media (max-width: 768px) {
 
     #burguer {
         display: block;
         background-color: rgba(29, 29, 29, 0.9);
         color: white;
-        text-align: center;
-        padding: 10px;
+        padding: 12px;
         cursor: pointer;
+        margin-top: 20px;
     }
 
     nav#itens {
@@ -28,10 +27,6 @@
     }
 
     #img-livro {
-        order: 2;
         max-width: 250px;
-    }
-    #texto {
-        order: 1;
     }
 }

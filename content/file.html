@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="./estilos/estilo.css">
     <link rel="stylesheet" href="./estilos/mediaquery.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
     <title>Psicóloga | Ilkare</title>
 </head>
 <body>
@@ -30,27 +32,34 @@
 
 <div class="top-space"></div>
 
+<!-- INTRODUÇÃO -->
 <section id="inicio">
     <div class="inicio-container">
         <img src="imagens/livro.png" alt="Livro" id="img-livro">
 
         <div class="inicio-texto">
-            <h1 id="texto">Seja Bem Vindo!</h1>
-            <h2>...</h2>
-            <p>...</p>
+            <h1>Seja bem-vindo(a)</h1>
+            <h2>Cuidar da mente é um ato de coragem</h2>
+            <p>
+                Um espaço acolhedor e profissional para fortalecer sua saúde mental
+                e promover autoconhecimento.
+            </p>
         </div>
     </div>
 </section>
 
 <div class="space"></div>
 
-<section id="sobre">
+<section id="sobre" class="scroll">
     <h2>Sobre Mim</h2>
     <img src="imagens/sobremim.png" alt="">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+    <p>
+        Atendo pessoas que buscam equilíbrio emocional,
+        autoconhecimento e qualidade de vida.
+    </p>
 </section>
 
-<section id="servicos">
+<section id="servicos" class="scroll">
     <h2>Serviços</h2>
     <ul>
         <li>Consulta psicológica presencial</li>
@@ -59,14 +68,14 @@
     </ul>
 </section>
 
-<section id="contato">
+<section id="contato" class="scroll">
     <h2>Contato</h2>
     <p>Email: seuemail@dominio.com</p>
     <p>WhatsApp: (xx) xxxxx-xxxx</p>
 </section>
 
 <footer>
-    © 2026 Seu Nome. Todos os direitos reservados.
+    © 2026 Ilkare Psicologia. Todos os direitos reservados.
 </footer>
 
 <script>
@@ -81,6 +90,21 @@ window.addEventListener('resize', () => {
         itens.classList.remove('ativo')
     }
 })
+
+/* ANIMAÇÃO AO ROLAR (SIMPLES E FUNCIONAL) */
+const elementos = document.querySelectorAll('.scroll')
+
+function animarScroll() {
+    elementos.forEach(el => {
+        const posicao = el.getBoundingClientRect().top
+        if (posicao < window.innerHeight - 100) {
+            el.classList.add('ativo')
+        }
+    })
+}
+
+window.addEventListener('scroll', animarScroll)
+animarScroll()
 </script>
 
 </body>
