@@ -21,12 +21,21 @@
         display: flex;
     }
 
+    .top-space {
+        height: 30px;
+    }
+
     .inicio-container {
         flex-direction: column;
         text-align: center;
     }
 
+    .inicio-texto {
+        order: 1;
+    }
+
     #img-livro {
+        order: 2;
         max-width: 250px;
     }
 }
