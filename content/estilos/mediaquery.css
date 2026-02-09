@@ -28,6 +28,10 @@
     }
 
     #img-livro {
+        order: 2;
         max-width: 250px;
+    }
+    #texto {
+        order: 1;
     }
 }
