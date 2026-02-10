@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="./estilos/estilo.css">
     <link rel="stylesheet" href="./estilos/mediaquery.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
@@ -12,7 +11,7 @@
 </head>
 <body>
 
-<header>
+<header id="header">
     <div class="header-container">
         <h1>Ilkare</h1>
         <h2>Psicologia clínica</h2>
@@ -32,17 +31,15 @@
 
 <div class="top-space"></div>
 
-<!-- INTRODUÇÃO -->
 <section id="inicio">
     <div class="inicio-container">
         <img src="imagens/livro.png" alt="Livro" id="img-livro">
 
         <div class="inicio-texto">
             <h1>Seja bem-vindo(a)</h1>
-            <h2>Cuidar da mente é um ato de coragem</h2>
+            <h2>...</h2>
             <p>
-                Um espaço acolhedor e profissional para fortalecer sua saúde mental
-                e promover autoconhecimento.
+                Um espaço acolhedor e profissional para fortalecer sua saúde mental e.
             </p>
         </div>
     </div>
@@ -50,7 +47,7 @@
 
 <div class="space"></div>
 
-<section id="sobre" class="scroll">
+<section id="sobre" class="scroll-progress">
     <h2>Sobre Mim</h2>
     <img src="imagens/sobremim.png" alt="">
     <p>
@@ -59,7 +56,7 @@
     </p>
 </section>
 
-<section id="servicos" class="scroll">
+<section id="servicos" class="scroll-progress">
     <h2>Serviços</h2>
     <ul>
         <li>Consulta psicológica presencial</li>
@@ -68,17 +65,18 @@
     </ul>
 </section>
 
-<section id="contato" class="scroll">
+<section id="contato" class="scroll-progress">
     <h2>Contato</h2>
     <p>Email: seuemail@dominio.com</p>
     <p>WhatsApp: (xx) xxxxx-xxxx</p>
 </section>
 
-<footer>
+<footer class="scroll-progress">
     © 2026 Ilkare Psicologia. Todos os direitos reservados.
 </footer>
 
 <script>
+/* MENU MOBILE */
 const itens = document.getElementById('itens')
 
 function clickMenu() {
@@ -91,20 +89,32 @@ window.addEventListener('resize', () => {
     }
 })
 
-/* ANIMAÇÃO AO ROLAR (SIMPLES E FUNCIONAL) */
-const elementos = document.querySelectorAll('.scroll')
+/* ANIMAÇÃO PROGRESSIVA NO SCROLL */
+const elementos = document.querySelectorAll('.scroll-progress')
+const header = document.getElementById('header')
 
-function animarScroll() {
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY
+
+    /* leve animação do menu */
+    if (scrollY > 10) {
+        header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.08)'
+    } else {
+        header.style.boxShadow = 'none'
+    }
+
+    /* animação das seções */
     elementos.forEach(el => {
-        const posicao = el.getBoundingClientRect().top
-        if (posicao < window.innerHeight - 100) {
-            el.classList.add('ativo')
-        }
-    })
-}
+        const rect = el.getBoundingClientRect()
+        const alturaTela = window.innerHeight
 
-window.addEventListener('scroll', animarScroll)
-animarScroll()
+        let progresso = 1 - rect.top / alturaTela
+        progresso = Math.max(0, Math.min(1, progresso))
+
+        el.style.opacity = progresso
+        el.style.transform = `translateY(${40 - progresso * 40}px)`
+    })
+})
 </script>
 
 </body>

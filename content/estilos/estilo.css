@@ -20,10 +20,18 @@ body {
 
 /* HEADER */
 
+header {
+    position: sticky;
+    top: 0;
+    background-color: #f3efef;
+    z-index: 10;
+    transition: box-shadow 0.3s ease;
+}
+
 .header-container {
     max-width: 1100px;
     margin: auto;
-    padding: 30px 20px 0;
+    padding: 20px;
     text-align: center;
 }
 
@@ -49,7 +57,7 @@ nav#itens {
     gap: 80px;
     background-color: #224e53;
     padding: 15px 0;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 nav#itens a {
@@ -61,14 +69,14 @@ nav#itens a {
 /* ESPAÇOS */
 
 .top-space {
-    height: 60px;
+    height: 20px;
 }
 
 .space {
     height: 80px;
 }
 
-/* INTRODUÇÃO */
+/* INTRO */
 
 .inicio-container {
     display: flex;
@@ -91,45 +99,20 @@ nav#itens a {
     animation: fadeUp 1.2s ease forwards;
 }
 
-.inicio-texto h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.inicio-texto h2 {
-    color: #224e53;
-    margin-bottom: 15px;
-}
-
 /* SEÇÕES */
 
-section {
+section, footer {
     max-width: 900px;
     margin: auto;
     padding: 40px 20px;
     text-align: center;
 }
 
-/* SCROLL */
+/* SCROLL PROGRESSIVO */
 
-.scroll {
+.scroll-progress {
     opacity: 0;
     transform: translateY(40px);
-    transition: 0.8s ease;
-}
-
-.scroll.ativo {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* FOOTER */
-
-footer {
-    text-align: center;
-    padding: 25px;
-    background: #222;
-    color: #fff;
 }
 
 /* ANIMAÇÕES */
