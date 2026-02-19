@@ -1,121 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Psicologia Clínica - Atendimento especializado para equilíbrio emocional e bem-estar.">
     <link rel="stylesheet" href="./estilos/estilo.css">
-    <link rel="stylesheet" href="./estilos/mediaquery.css">
+    <!-- Removido mediaquery.css separado pois integrei no principal para melhor performance/manutenção -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
-
-    <title>Psicóloga | Ilkare</title>
+    <title>Ilkare Psicologia | Terapia Clínica</title>
 </head>
+
 <body>
 
-<header id="header">
-    <div class="header-container">
-        <h1>Ilkare</h1>
-        <h2>Psicologia clínica</h2>
+    <header id="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1>Ilkare</h1>
+                <h2>Psicologia Clínica</h2>
+            </div>
 
-        <span class="material-symbols-outlined" id="burguer" onclick="clickMenu()">
-            menu
-        </span>
+            <span class="material-symbols-outlined" id="burguer" onclick="toggleMenu()">
+                menu
+            </span>
 
-        <nav id="itens">
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#servicos">Serviços</a>
-            <a href="#contato">Contato</a>
-        </nav>
-    </div>
-</header>
-
-<div class="top-space"></div>
-
-<section id="inicio">
-    <div class="inicio-container">
-        <img src="imagens/livro.png" alt="Livro" id="img-livro">
-
-        <div class="inicio-texto">
-            <h1>Seja bem-vindo(a)</h1>
-            <h2>...</h2>
-            <p>
-                Um espaço acolhedor e profissional para fortalecer sua saúde mental e.
-            </p>
+            <nav id="itens">
+                <a href="#inicio" onclick="closeMenu()">Início</a>
+                <a href="#sobre" onclick="closeMenu()">Sobre</a>
+                <a href="#como-funciona" onclick="closeMenu()">Como Funciona</a>
+                <a href="#servicos" onclick="closeMenu()">Serviços</a>
+                <a href="#contato" onclick="closeMenu()">Contato</a>
+            </nav>
         </div>
-    </div>
-</section>
+    </header>
 
-<div class="space"></div>
+    <section id="inicio">
+        <div class="inicio-container">
+            <div class="inicio-texto scroll-reveal">
+                <h1>Encontre equilíbrio e bem-estar emocional</h1>
+                <p>
+                    Um espaço acolhedor e seguro para sua jornada de autoconhecimento.
+                    Sua saúde mental é prioridade.
+                </p>
+                <a href="https://wa.me/SeuNumeroAqui" class="btn-cta" target="_blank">Agendar Consulta</a>
+            </div>
 
-<section id="sobre" class="scroll-progress">
-    <h2>Sobre Mim</h2>
-    <img src="imagens/sobremim.png" alt="">
-    <p>
-        Atendo pessoas que buscam equilíbrio emocional,
-        autoconhecimento e qualidade de vida.
-    </p>
-</section>
+            <div class="inicio-imagem scroll-reveal">
+                <!-- Usando a imagem livro.png temporariamente, mas ideal seria uma foto profissional ou ilustra -->
+                <img src="imagens/livro.png" alt="Ambiente acolhedor de terapia">
+            </div>
+        </div>
+    </section>
 
-<section id="servicos" class="scroll-progress">
-    <h2>Serviços</h2>
-    <ul>
-        <li>Consulta psicológica presencial</li>
-        <li>Atendimento online</li>
-        <li>Terapia para ansiedade e estresse</li>
-    </ul>
-</section>
+    <section id="sobre">
+        <div class="sobre-container">
+            <div class="sobre-imagem scroll-reveal">
+                <img src="imagens/sobremim.png" alt="Foto da Psicóloga">
+            </div>
+            <div class="sobre-texto scroll-reveal">
+                <h2 class="section-title" style="text-align: left;">Sobre Mim</h2>
+                <h3>Construindo caminhos para o bem-estar</h3>
+                <p>
+                    Olá, sou psicóloga clínica dedicada a ajudar pessoas a encontrarem equilíbrio emocional e qualidade
+                    de vida.
+                    <br><br>
+                    Meu trabalho é pautado na escuta ativa, empática e livre de julgamentos. Acredito que cada indivíduo
+                    possui uma história única e, através da terapia, podemos juntos ressignificar experiências e
+                    desenvolver ferramentas para lidar com os desafios da vida cotidiana.
+                </p>
+                <br>
+                <a href="#contato" class="btn-cta" style="background-color: var(--cor-secundaria);">Saiba Mais</a>
+            </div>
+        </div>
+    </section>
 
-<section id="contato" class="scroll-progress">
-    <h2>Contato</h2>
-    <p>Email: seuemail@dominio.com</p>
-    <p>WhatsApp: (xx) xxxxx-xxxx</p>
-</section>
+    <section id="como-funciona">
+        <h2 class="section-title scroll-reveal">Como Funciona a Terapia</h2>
+        <p class="section-subtitle scroll-reveal">O processo terapêutico é uma jornada de descoberta. Veja como
+            começamos:</p>
 
-<footer class="scroll-progress">
-    © 2026 Ilkare Psicologia. Todos os direitos reservados.
-</footer>
+        <div class="steps-container">
+            <div class="step-card scroll-reveal">
+                <div class="step-number">01</div>
+                <h3>Contato Inicial</h3>
+                <p>Entre em contato pelo WhatsApp para tirar dúvidas e agendar seu primeiro horário.</p>
+            </div>
+            <div class="step-card scroll-reveal">
+                <div class="step-number">02</div>
+                <h3>Primeira Sessão</h3>
+                <p>Um momento para nos conhecermos, entendermos suas demandas e alinharmos expectativas.</p>
+            </div>
+            <div class="step-card scroll-reveal">
+                <div class="step-number">03</div>
+                <h3>O Processo</h3>
+                <p>Sessões semanais focadas no seu desenvolvimento, com sigilo e acolhimento total.</p>
+            </div>
+        </div>
+    </section>
 
-<script>
-/* MENU MOBILE */
-const itens = document.getElementById('itens')
+    <section id="servicos">
+        <h2 class="section-title scroll-reveal">Áreas de Atuação</h2>
+        <div class="servicos-grid">
+            <div class="servico-card scroll-reveal">
+                <span class="material-symbols-outlined"
+                    style="font-size: 40px; color: var(--cor-primaria);">self_improvement</span>
+                <h3>Psicoterapia Individual</h3>
+                <p>Espaço para tratar ansiedade, depressão e questões pessoais profundas.</p>
+            </div>
+            <div class="servico-card scroll-reveal">
+                <span class="material-symbols-outlined"
+                    style="font-size: 40px; color: var(--cor-primaria);">devices</span>
+                <h3>Atendimento Online</h3>
+                <p>Terapia no conforto da sua casa, com a mesma qualidade e ética do presencial.</p>
+            </div>
+            <div class="servico-card scroll-reveal">
+                <span class="material-symbols-outlined"
+                    style="font-size: 40px; color: var(--cor-primaria);">psychology</span>
+                <h3>Orientação Vocacional</h3>
+                <p>Suporte para escolhas profissionais e transições de carreira.</p>
+            </div>
+        </div>
+    </section>
 
-function clickMenu() {
-    itens.classList.toggle('ativo')
-}
+    <section id="contato">
+        <div class="contato-container scroll-reveal">
+            <h2 class="section-title" style="color: white; margin-bottom: 0.5rem;">Vamos conversar?</h2>
+            <p>Agende sua consulta ou tire suas dúvidas.</p>
 
-window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        itens.classList.remove('ativo')
-    }
-})
+            <div class="contato-info">
+                <p>
+                    <span class="material-symbols-outlined">mail</span>
+                    contato@ilkarepsicologia.com.br
+                </p>
+                <p>
+                    <span class="material-symbols-outlined">call</span>
+                    (11) 99999-9999
+                </p>
+            </div>
 
-/* ANIMAÇÃO PROGRESSIVA NO SCROLL */
-const elementos = document.querySelectorAll('.scroll-progress')
-const header = document.getElementById('header')
+            <br>
+            <a href="https://wa.me/SeuNumeroAqui" class="btn-cta"
+                style="background-color: white; color: var(--cor-primaria);">Chamar no WhatsApp</a>
+        </div>
+    </section>
 
-window.addEventListener('scroll', () => {
-    const scrollY = window.scrollY
+    <footer>
+        <p>&copy; 2026 Ilkare Psicologia. Todos os direitos reservados.</p>
+        <p style="font-size: 0.8rem; margin-top: 10px; opacity: 0.7;">Desenvolvido com carinho.</p>
+    </footer>
 
-    /* leve animação do menu */
-    if (scrollY > 10) {
-        header.style.boxShadow = '0 4px 10px rgba(0,0,0,0.08)'
-    } else {
-        header.style.boxShadow = 'none'
-    }
+    <script>
+        /* MENU MOBILE */
+        function toggleMenu() {
+            const itens = document.getElementById('itens');
+            itens.classList.toggle('ativo');
+        }
 
-    /* animação das seções */
-    elementos.forEach(el => {
-        const rect = el.getBoundingClientRect()
-        const alturaTela = window.innerHeight
+        function closeMenu() {
+            const itens = document.getElementById('itens');
+            if (window.innerWidth <= 768) {
+                itens.classList.remove('ativo');
+            }
+        }
 
-        let progresso = 1 - rect.top / alturaTela
-        progresso = Math.max(0, Math.min(1, progresso))
+        /* INTERSECTION OBSERVER PARA ANIMAÇÕES AO SCROLL */
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
 
-        el.style.opacity = progresso
-        el.style.transform = `translateY(${40 - progresso * 40}px)`
-    })
-})
-</script>
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Opcional: parar de observar após aparecer
+                    // observer.unobserve(entry.target); 
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-reveal').forEach(element => {
+            observer.observe(element);
+        });
+    </script>
 
 </body>
+
 </html>
