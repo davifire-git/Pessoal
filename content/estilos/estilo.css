@@ -244,6 +244,11 @@ section {
     object-fit: cover;
     height: 100%;
     max-height: 500px;
+    transition: transform .5s;
+}
+
+.sobre-imagem:hover img {
+    transform: scale(1.01);
 }
 
 .sobre-texto h3 {
