@@ -69,6 +69,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 0 2rem;
+    transition: padding 0.5s ease-in-out;
 }
 
 .logo {
@@ -152,6 +153,11 @@ nav#itens a:hover::after {
     gap: 4rem;
     padding: 0 2rem;
     align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.inicio-texto {
+    transition: all 0.5s ease-in-out;
 }
 
 .inicio-texto h1 {
@@ -191,6 +197,7 @@ nav#itens a:hover::after {
     position: relative;
     display: flex;
     justify-content: center;
+    transition: all 0.5s ease-in-out;
 }
 
 .inicio-imagem img {
@@ -198,12 +205,12 @@ nav#itens a:hover::after {
     height: auto;
     border-radius: var(--border-radius);
     box-shadow: 20px 20px 0 var(--cor-secundaria);
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, box-shadow 0.5s ease-in-out;
 }
 
 .inicio-imagem:hover img {
     transform: scale(1.02);
-} 
+}
 
 /* --- SEÇÕES GERAIS --- */
 section {
@@ -236,6 +243,7 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     align-items: center;
+    transition: all 0.5s ease-in-out;
 }
 
 .sobre-imagem img {
@@ -268,6 +276,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
+    transition: all 0.5s ease-in-out;
 }
 
 .step-card {
@@ -307,6 +316,7 @@ section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
+    transition: all 0.5s ease-in-out;
 }
 
 .servico-card {
