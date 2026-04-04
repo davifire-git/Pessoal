@@ -30,3 +30,32 @@
         document.querySelectorAll('.scroll-reveal').forEach(element => {
             observer.observe(element);
         });
+
+        /* === MODAL SAIBA MAIS === */
+        function abrirModal() {
+            const modal = document.getElementById('modalSaibaMais');
+            modal.style.display = 'flex';
+            // Pequeno delay para a animação de opacidade da classe .active
+            setTimeout(() => {
+                modal.classList.add('active');
+            }, 10);
+            document.body.style.overflow = 'hidden'; // Desativa rolagem do fundo
+        }
+
+        function fecharModal() {
+            const modal = document.getElementById('modalSaibaMais');
+            modal.classList.remove('active');
+            // Aguarda a transição de opacidade acabar para dar display: none
+            setTimeout(() => {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Reativa rolagem
+            }, 300);
+        }
+
+        // Fechar ao clicar fora da caixinha (direto no overlay escurinho)
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('modalSaibaMais');
+            if (event.target === modal) {
+                fecharModal();
+            }
+        });
