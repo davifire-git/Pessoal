@@ -308,6 +308,21 @@ section {
     margin-bottom: 1rem;
 }
 
+/* --- FIX: Centralizar o 3º card de "Como Funciona" em telas médias (2 colunas) --- */
+@media (max-width: 920px) and (min-width: 630px) {
+    .steps-container {
+        /* Força a ser 2 colunas */
+        grid-template-columns: 1fr 1fr;
+    }
+    .steps-container .step-card:last-child:nth-child(3) {
+        /* O último e terceiro item estica por ambas colunas, mas enviamos pro centro */
+        grid-column: 1 / -1;
+        justify-self: center;
+        /* Dá a largura exata que teria se fosse uma coluna normal do grid (50% menos a metade do gap de 2rem) */
+        width: calc(50% - 1rem);
+    }
+}
+
 #servicos {
     background-color: var(--branco);
 }
@@ -339,6 +354,18 @@ section {
     color: var(--cor-primaria);
     margin-bottom: 1rem;
     font-size: 1.5rem;
+}
+
+/* --- FIX: Centralizar o 3º card de "Serviços" em telas médias (2 colunas) --- */
+@media (max-width: 1040px) and (min-width: 690px) {
+    .servicos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .servicos-grid .servico-card:last-child:nth-child(3) {
+        grid-column: 1 / -1;
+        justify-self: center;
+        width: calc(50% - 1rem); 
+    }
 }
 
 /* --- CONTATO --- */
