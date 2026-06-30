@@ -1,0 +1,49 @@
+# ROBOTS.TXT — Instruções para os robôs de busca
+# =================================================
+# Este arquivo controla quais páginas do seu site
+# os robôs do Google (e outros buscadores) podem acessar.
+#
+# Regra geral: permita tudo, bloqueie só o que não deve aparecer no Google.
+# Colocar nada aqui é um erro — o Google assume que pode fazer o que quiser.
+
+
+# ===== REGRAS PARA TODOS OS ROBÔS =====
+# "User-agent: *" aplica as regras abaixo para QUALQUER robô (Google, Bing, etc.)
+User-agent: *
+
+# Disallow vazio = permite que o robô acesse TUDO no site
+# (não queremos bloquear nada por enquanto)
+Disallow:
+
+# Bloqueia acesso à pasta de backup (não precisa aparecer no Google)
+Disallow: /backup/
+
+# Bloqueia acesso a arquivos .js e .css internos se preferir
+# (comentado por padrão — o Google moderno precisa desses arquivos para renderizar)
+# Disallow: /estilos/
+# Disallow: /javascript.js
+
+
+# ===== REGRAS ESPECÍFICAS PARA O GOOGLEBOT =====
+# Googlebot é o robô principal do Google para indexação de páginas
+User-agent: Googlebot
+
+# Permite acesso a tudo (sem restrições para o Google)
+Disallow:
+
+
+# ===== REGRAS PARA O ROBÔ DE IMAGENS DO GOOGLE =====
+# Googlebot-Image indexa suas fotos — importante para aparecer no Google Imagens
+User-agent: Googlebot-Image
+
+# Permite que o Google indexe todas as suas imagens
+Allow: /imagens/
+
+# Bloqueia apenas a imagem de livro (usada internamente, não é marketing)
+# Disallow: /imagens/livro.png
+
+
+# ===== LINK PARA O SITEMAP =====
+# Informa a TODOS os robôs onde está o mapa do site
+# Isso acelera muito a descoberta e indexação das suas páginas
+Sitemap: https://www.ilkarepsi.com/sitemap.xml

@@ -5,10 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="https://www.ilkarepsi.com">
+
+    <!-- Indica ao Google onde está o mapa do site (reforça o robots.txt) -->
+    <link rel="sitemap" type="application/xml" href="https://www.ilkarepsi.com/sitemap.xml">
+
+    <!-- Avisa o navegador para se conectar ao Google Fonts antes de precisar, acelerando o carregamento -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- crossorigin é necessário para fontes que vêm de outro domínio -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Avisa o navegador para resolver o DNS do WhatsApp antes de precisar (botão de contato) -->
+    <link rel="dns-prefetch" href="https://api.whatsapp.com">
+
     <link rel="stylesheet" href="estilos/estilo.css">
     <link rel="stylesheet" href="estilos/mediaquery.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
     <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <!-- apple-touch-icon: ícone que aparece quando o usuário adiciona o site à tela inicial do iPhone -->
+    <link rel="apple-touch-icon" href="imagens/favicon.ico">
     <title>Ilkare Ruiz Brabo | Psicóloga Clínica | Psicóloga em Marília</title>
     <meta name="google-site-verification" content="JiAU5RhtBglbFpOm03lmIRSncttemw6IICREUOoDnOw" />
 
@@ -96,6 +110,50 @@
     }
     </script>
 
+    <!-- ===== FAQ: DADOS ESTRUTURADOS DE PERGUNTAS E RESPOSTAS ===== -->
+    <!-- O Google pode exibir essas perguntas diretamente no resultado de busca (rich result) -->
+    <!-- Isso aumenta muito o espaço ocupado no Google e atrai mais cliques -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Como funciona a terapia online?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A terapia online acontece por videochamada, com a mesma qualidade e ética do atendimento presencial. Você precisa apenas de um celular ou computador com internet estável."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Qual é a abordagem terapêutica utilizada?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Utilizo a Terapia de Aceitação e Compromisso (ACT) e a Terapia Cognitivo-Comportamental (TCC), abordagens baseadas em evidências científicas que ajudam a desenvolver flexibilidade psicológica."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quanto tempo dura cada sessão?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Cada sessão tem duração de 50 minutos, com frequência semanal, permitindo um acompanhamento contínuo e individualizado."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como agendar uma consulta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "O agendamento é feito pelo WhatsApp: (14) 99159-9009. Entre em contato para tirar dúvidas e marcar seu primeiro horário."
+          }
+        }
+      ]
+    }
+    </script>
+
 
 </head>
 
@@ -136,8 +194,8 @@
             </div>
 
             <div class="inicio-imagem scroll-reveal">
-                <!-- Usando a imagem livro.png temporariamente, mas ideal seria uma foto profissional ou ilustra -->
-                <img src="imagens/ILKARE BRABO - 2025-73.jpg" alt="Ambiente acolhedor de terapia">
+                <!-- loading="eager" na primeira imagem: carrega imediatamente pois está visível logo ao abrir a página -->
+                <img src="imagens/ILKARE BRABO - 2025-73.jpg" alt="Ilkare Ruiz Brabo, psicóloga clínica em Marília, em seu ambiente de atendimento" loading="eager" width="600" height="600">
             </div>
         </div>
     </section>
@@ -145,7 +203,8 @@
     <section id="sobre">
         <div class="sobre-container">
             <div class="sobre-imagem scroll-reveal">
-                <img src="imagens/ILKARE BRABO - 2025-29.jpg" alt="Foto da Psicóloga">
+                <!-- loading="lazy": só carrega essa imagem quando o usuário rolar até ela, economizando dados e acelerando a página -->
+                <img src="imagens/ILKARE BRABO - 2025-29.jpg" alt="Foto de Ilkare Ruiz Brabo, psicóloga clínica especializada em TCC e ACT" loading="lazy" width="500" height="600">
             </div>
             <div class="sobre-texto scroll-reveal">
                 <h2 class="section-title" style="text-align: left;">Sobre Mim</h2>
