@@ -1,49 +1,85 @@
 # ROBOTS.TXT — Instruções para os robôs de busca
 # =================================================
-# Este arquivo controla quais páginas do seu site
-# os robôs do Google (e outros buscadores) podem acessar.
+# Arquivo de texto puro (isso é correto, não é um erro de formatação).
+# O formato robots.txt foi criado assim intencionalmente — todos os sites
+# do mundo têm este arquivo sem cores ou syntax highlight.
 #
 # Regra geral: permita tudo, bloqueie só o que não deve aparecer no Google.
-# Colocar nada aqui é um erro — o Google assume que pode fazer o que quiser.
 
 
-# ===== REGRAS PARA TODOS OS ROBÔS =====
-# "User-agent: *" aplica as regras abaixo para QUALQUER robô (Google, Bing, etc.)
+# ===== TODOS OS ROBÔS (regra padrão) =====
 User-agent: *
+Disallow: /backup/
+Allow: /
 
-# Disallow vazio = permite que o robô acesse TUDO no site
-# (não queremos bloquear nada por enquanto)
-Disallow:
 
-# Bloqueia acesso à pasta de backup (não precisa aparecer no Google)
+# ===== GOOGLEBOT (indexação de páginas) =====
+# Robô principal do Google — indexa o conteúdo das páginas
+User-agent: Googlebot
+Allow: /
 Disallow: /backup/
 
-# Bloqueia acesso a arquivos .js e .css internos se preferir
-# (comentado por padrão — o Google moderno precisa desses arquivos para renderizar)
-# Disallow: /estilos/
-# Disallow: /javascript.js
 
-
-# ===== REGRAS ESPECÍFICAS PARA O GOOGLEBOT =====
-# Googlebot é o robô principal do Google para indexação de páginas
-User-agent: Googlebot
-
-# Permite acesso a tudo (sem restrições para o Google)
-Disallow:
-
-
-# ===== REGRAS PARA O ROBÔ DE IMAGENS DO GOOGLE =====
-# Googlebot-Image indexa suas fotos — importante para aparecer no Google Imagens
+# ===== GOOGLEBOT-IMAGE (imagens) =====
+# Indexa as fotos do site — importante para aparecer no Google Imagens
 User-agent: Googlebot-Image
-
-# Permite que o Google indexe todas as suas imagens
 Allow: /imagens/
 
-# Bloqueia apenas a imagem de livro (usada internamente, não é marketing)
-# Disallow: /imagens/livro.png
+
+# ===== GOOGLEBOT-VIDEO (vídeos) =====
+User-agent: Googlebot-Video
+Allow: /
 
 
-# ===== LINK PARA O SITEMAP =====
+# ===== GOOGLE ADS BOT =====
+# Usado pelo Google para avaliar páginas de destino de anúncios (Google Ads)
+User-agent: AdsBot-Google
+Allow: /
+
+
+# ===== GOOGLE MOBILE BOT =====
+# Avalia como o site aparece em dispositivos móveis
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+
+# ===== BINGBOT (Microsoft Bing) =====
+User-agent: Bingbot
+Allow: /
+Disallow: /backup/
+
+
+# ===== SLURP (Yahoo Search) =====
+User-agent: Slurp
+Allow: /
+
+
+# ===== DUCKDUCKBOT (DuckDuckGo) =====
+User-agent: DuckDuckBot
+Allow: /
+
+
+# ===== BOTS RUINS — BLOQUEADOS =====
+# Alguns robôs fazem scraping (copiam conteúdo) ou sobrecarregam o servidor.
+# Bloqueamos os mais conhecidos:
+
+# AhrefsBot — rastreador de SEO de terceiros (agressivo)
+User-agent: AhrefsBot
+Disallow: /
+
+# SemrushBot — igual ao Ahrefs, rastreador de marketing
+User-agent: SemrushBot
+Disallow: /
+
+# DotBot — rastreador da Moz, desnecessário para este site
+User-agent: DotBot
+Disallow: /
+
+# MJ12bot — rastreador do Majestic SEO
+User-agent: MJ12bot
+Disallow: /
+
+
+# ===== SITEMAP =====
 # Informa a TODOS os robôs onde está o mapa do site
-# Isso acelera muito a descoberta e indexação das suas páginas
 Sitemap: https://www.ilkarepsi.com/sitemap.xml
